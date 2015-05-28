@@ -4,12 +4,10 @@ Server endpoint for communicating with stanford-ner server
 #####SET UP
 1. Have Java jdk 1.8 installed and in your path, stanford-ner requires java 1.8
 2. Install dependencies
-	a. `bash install.sh`
-	b. 
-		 manually install stanford-ner from stanford.edu website place in project directory
-		or
-		 run `npm install` *this only works in linux*
-
+	 a. `bash install.sh` *this only works in linux*
+	or
+	 b. manually install stanford-ner from stanford.edu website place in project directory
+		and run `npm install`
 If no errors then you have set everything up correctly
 
 #####START UP
