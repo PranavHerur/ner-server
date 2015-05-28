@@ -62,14 +62,3 @@ example for 3class. 4class and 7class return more properties in entities
 		}
 
 
-####Example
-
-i have included an example for communicating with ner-server in `example/ner.js`
-
-#*YOU MUST `npm install bluebird` TO USE THIS*
-
-######i did not include bluebird in package.json since the actual project does not require it
-
-to run use: `node --harmony ner.js test.txt` 
-
-this file assumes default values for ports; 8008 for ner-server and 9191 for the stanford-ner-server. In order to change these values you have to go in and change it in ner.js. 

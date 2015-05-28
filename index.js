@@ -31,13 +31,16 @@ app.post('/ner', function(req, res) {
 		var text = req.body.file.replace(/\n+/gm, function myFunc(x){return' ';});
 		var process = spawn('java', ['-cp', 'stanford-ner-2015-01-30/stanford-ner-with-classifier.jar', 'edu.stanford.nlp.ie.NERServer' ,'-port' ,nerPort ,'-client']);
 
-        process.stdout.on('data', function (data) {
+		//when java server returns data
+		process.stdout.on('data', function (data) {
+				//ignore if 'Input' write file text to stream
                 if(String(data).indexOf('Input some text and press RETURN to NER tag it,  or just RETURN to finish.')==0){
                         process.stdin.write(text);
                         process.stdin.write('\n');
                         process.stdin.write('\n');
                         return;
                 }
+				//concat returned data
                 else if(String(data).length > 1){
                         parsed += String(data);
                         return;
@@ -52,8 +55,10 @@ app.post('/ner', function(req, res) {
           console.log('stderr: ' + data);
         });
 
+		//when process ends
         process.on('close', function (code) {
                 console.log('stanford-ner process exited with code ' + code);
+				//return ner tags, after parsing
                 res.status(200).json({entities:parse(parsed)});
         });
 
