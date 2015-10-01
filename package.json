@@ -1,6 +1,6 @@
 {
   "name": "ner-server",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Server endpoint for communicating with stanford-ner server",
   "main": "index.js",
   "scripts": {
