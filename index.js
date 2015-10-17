@@ -29,8 +29,8 @@ app.post('/ner', function(req, res) {
 		var parsed = '';
 		var nerPort = req.body.port ? req.body.port : 9191;
 		var text = req.body.file.replace(/\n+/gm, function myFunc(x){return' ';});
-		var process = spawn('java', ['-cp', 'stanford-ner-2015-01-30/stanford-ner-with-classifier.jar', 'edu.stanford.nlp.ie.NERServer' ,'-port' ,nerPort ,'-client']);
-
+		var process = spawn('java', ['-cp', 'stanford-ner-2015-04-20/stanford-ner-with-classifier.jar', 'edu.stanford.nlp.ie.NERServer' ,'-port' ,nerPort ,'-client']);
+		
 		//when java server returns data
 		process.stdout.on('data', function (data) {
 				//ignore if 'Input' write file text to stream
