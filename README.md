@@ -62,10 +62,11 @@ POST /ner
 
 PARAMS:
 content-type = application/json
-	json:
+
+	json :
 		{
 			file:'string of text from file',				
-			port:'port number of stanford java server, optional and defaults to using port 9191 for stanford java server'
+			port:'port number of stanford NER, optional and defaults to using port 9191 for stanford NER'
 		}		
 
 This returns
