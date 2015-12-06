@@ -16,7 +16,6 @@ run these commands to start java server
 
 *THIS IS NOT THE SERVER YOU ARE COMMUNICATING WITH*
 
-<<<<<<< HEAD
 `cp stanford-ner-2015-01-30/stanford-ner.jar stanford-ner-2015-01-30/stanford-ner-with-classifier.jar`
 
 `jar -uf stanford-ner-2015-01-30/stanford-ner-with-classifier.jar stanford-ner-2015-01-30/classifiers/english.all.3class.distsim.crf.ser.gz`
@@ -32,7 +31,7 @@ change `english.all.3class.distsim.crf.ser.gz` in `stanford-ner-2015-01-30/class
 	`english.all.4class.distsim.crf.ser.gz` 
 	or
 	`english.all.7class.distsim.crf.ser.gz`
-=======
+
 `cp stanford-ner-2015-04-20/stanford-ner.jar stanford-ner-2015-04-20/stanford-ner-with-classifier.jar`
 
 `jar -uf stanford-ner-2015-04-20/stanford-ner-with-classifier.jar stanford-ner-2015-04-20/classifiers/english.all.3class.distsim.crf.ser.gz`
@@ -48,7 +47,7 @@ change `english.all.3class.distsim.crf.ser.gz` in `stanford-ner-2015-04-20/class
 	`english.conll.4class.distsim.crf.ser.gz`
 	or
 	`english.muc.7class.distsim.crf.ser.gz`
->>>>>>> 9da5d25e833c784940002e9efd3302b7ba465cfc
+
 
 *THIS IS THE SERVER YOU ARE COMMUNICATING WITH*
 
@@ -63,29 +62,16 @@ POST /ner
 
 PARAMS:
 content-type = application/json
-<<<<<<< HEAD
- 
-=======
-
->>>>>>> 9da5d25e833c784940002e9efd3302b7ba465cfc
 	json:{
 		file:'string of text from file',				
 		port:'port number of stanford java server, optional and defaults to using port 9191 for stanford java server'
 	}		
-<<<<<<< HEAD
-	
-=======
 
->>>>>>> 9da5d25e833c784940002e9efd3302b7ba465cfc
 This returns
 example for 3class. 4class and 7class return more properties in entities
 
 	entities :
-<<<<<<< HEAD
-		{	
-=======
 		{
->>>>>>> 9da5d25e833c784940002e9efd3302b7ba465cfc
 			PERSON:'',
 			LOCATION:'',
 			ORGANIZATION:''
