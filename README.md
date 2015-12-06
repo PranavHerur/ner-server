@@ -62,10 +62,11 @@ POST /ner
 
 PARAMS:
 content-type = application/json
-	json:{
-		file:'string of text from file',				
-		port:'port number of stanford java server, optional and defaults to using port 9191 for stanford java server'
-	}		
+	json:
+		{
+			file:'string of text from file',				
+			port:'port number of stanford java server, optional and defaults to using port 9191 for stanford java server'
+		}		
 
 This returns
 example for 3class. 4class and 7class return more properties in entities
