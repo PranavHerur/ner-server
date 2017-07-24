@@ -62,15 +62,15 @@ This returns an
 example for 3class. 
 <br>4class and 7class return more properties
 
-entities : {
-	Person:'ALL',
-	Location:'ALL',
-	Organization:'ALL',
-	Misc:'4class Only',
-	Money:'7class Only',
-	Percent:'7class Only',
-	Date:'7class Only',
-	Time:'7class Only'
+entities : {<br>
+	Person:'ALL',<br>
+	Location:'ALL',<br>
+	Organization:'ALL',<br>
+	Misc:'4class Only',<br>
+	Money:'7class Only',<br>
+	Percent:'7class Only',<br>
+	Date:'7class Only',<br>
+	Time:'7class Only'<br>
 }
       
       
