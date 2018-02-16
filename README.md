@@ -4,10 +4,8 @@ JavaScript Server endpoint for communicating with stanford-ner server
 ##### SET UP
 1. Have Java jdk 1.8 installed and in your path, stanford-ner requires java 1.8
 2. Install dependencies<br>
-	 a. `bash install.sh` *this only works in linux*
-     <br>
-     b. manually install stanford-ner from stanford.edu website place in project directory
-		and run `npm install`
+     a. manually install stanford-ner from stanford.edu website place in project directory
+     b. run `npm install`
 If no errors then you have set everything up correctly
 
 ##### START UP
@@ -18,25 +16,10 @@ run these commands to start java server
 
 1.
 ```
-cp stanford-ner-2017-06-09/stanford-ner.jar stanford-ner-2017-06-09/stanford-ner-with-classifier.jar
-```
-
-2.
-```  
-jar -uf stanford-ner-2017-06-09/stanford-ner-with-classifier.jar stanford-ner-2017-06-09/classifiers/english.all.3class.distsim.crf.ser.gz
-```
-
-3.
-``` 
-java -mx2g -cp stanford-ner-2017-06-09/stanford-ner-with-classifier.jar  edu.stanford.nlp.ie.NERServer -port 9191 -loadClassifier stanford-ner-2017-06-09/classifiers/english.all.3class.distsim.crf.ser.gz
+C:\java-1.8\bin\java -Djava.ext.dirs=./lib -cp stanford-ner.jar edu.stanford.nlp.ie.NERServer -port 9191 -loadClassifier ./classifiers/english.muc.7class.distsim.crf.ser.gz  -tokenizerFactory edu.stanford.nlp.process.WhitespaceTokenizer -tokenizerOptions tokenizeNLs=false -outputFormat slashTags
 ``` 
 change `-port 9191` to whatever port you want the stanford-ner server to be listening to
 
-change `english.all.3class.distsim.crf.ser.gz` to
-
-	english.all.4class.distsim.crf.ser.gz
-	or
-	english.all.7class.distsim.crf.ser.gz
 
 
 *THIS IS THE SERVER YOU ARE COMMUNICATING WITH*
