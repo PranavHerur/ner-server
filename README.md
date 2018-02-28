@@ -51,7 +51,7 @@ ner.post(
 #### Using ner-server
 Example return object<br/>
 3class returns Person, Location, Organization<br/>
-$class return 3class + Misc<br/>
+4class return 3class + Misc<br/>
 7class returns 3class + Money, Percent, Date, Time<br/>
 
 ```
