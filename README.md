@@ -23,7 +23,7 @@ change `-port 9191` to whatever port you want the stanford-ner server to be list
 
 #### Example
 ```
-var ner = require('./ner-server');
+var ner = require('ner-server');
 
 var text = "The fate of Lehman Brothers, the beleaguered investment bank, \
 hung in the balance on Sunday as Federal Reserve officials and the leaders of \
