@@ -4,12 +4,13 @@
   "description": "Server endpoint for communicating with stanford-ner server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "dependencies": {
     "body-parser": "1.12.2",
     "express": "4.12.3",
     "request": "*",
+	"net": "*",,
     "underscore": "1.8.3"
   },
   "author": "Pranav Herur",
