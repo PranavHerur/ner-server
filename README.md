@@ -4,10 +4,10 @@ JavaScript api endpoint wrapper for communicating with stanford-ner server
 ##### SET UP
 1. Have Java jdk 1.8 installed and in your path, stanford-ner requires java 1.8
 2. Install dependencies<br>
-     a. manually install stanford-ner from stanford.edu website place in project directory
-		https://nlp.stanford.edu/software/stanford-ner-2017-06-09.zip
-     b. run `npm install`
-If no errors then you have set everything up correctly
+     a. manually install stanford-ner from stanford.edu website place in project directory<br/>
+		https://nlp.stanford.edu/software/stanford-ner-2017-06-09.zip<br/>
+     b. run `npm install`<br/>
+If no errors then you have set everything up correctly<br/>
 
 ##### START UP
 
@@ -49,10 +49,10 @@ ner.post(
 ```
 
 #### Using ner-server
-This example return object
-3class returns Person, Location, Organization
-$class return 3class + Misc
-7class returns 3class + Money, Percent, Date, Time
+Example return object<br/>
+3class returns Person, Location, Organization<br/>
+$class return 3class + Misc<br/>
+7class returns 3class + Money, Percent, Date, Time<br/>
 
 ```
 entities : {<br>
