@@ -20,6 +20,9 @@ java -Djava.ext.dirs=./lib -cp stanford-ner.jar edu.stanford.nlp.ie.NERServer -p
 change `-port 9191` to whatever port you want the stanford-ner server to be listening to
 
 
+
+#### Example
+'''
 var ner = require('./ner-server');
 
 var text = "The fate of Lehman Brothers, the beleaguered investment bank, \
@@ -28,6 +31,7 @@ major financial institutions continued to gather in emergency meetings trying \
 to complete a plan to rescue the stricken bank.  Several possible plans emerged \
 from the talks, held at the Federal Reserve Bank of New York and led by Timothy R. Geithner, \
 the president of the New York Fed, and Treasury Secretary Henry M. Paulson Jr."
+
 
 ner.cli(
 	9191, text,
@@ -42,7 +46,7 @@ ner.post(
 		console.log('post tags: '+JSON.stringify(res.tags)+'\n');
 	}
 );
-
+'''
 
 #### Using ner-server
 This example return object
@@ -50,6 +54,7 @@ This example return object
 $class return 3class + Misc
 7class returns 3class + Money, Percent, Date, Time
 
+'''
 entities : {<br>
 	Person:'ALL',<br>
 	Location:'ALL',<br>
@@ -60,5 +65,5 @@ entities : {<br>
 	Date:'7class Only',<br>
 	Time:'7class Only'<br>
 }
-      
-      
+'''
+
