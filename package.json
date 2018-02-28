@@ -1,6 +1,6 @@
 {
   "name": "ner-server",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "Server endpoint for communicating with stanford-ner server",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "body-parser": "1.12.2",
     "express": "4.12.3",
     "request": "*",
-	"net": "*",
+    "net": "*",
     "underscore": "1.8.3"
   },
   "author": "Pranav Herur",
